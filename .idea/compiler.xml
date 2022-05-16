@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel target="11">
+      <module name="Material_Kompose.charts.commonMain" target="11" />
+      <module name="Material_Kompose.charts.commonTest" target="11" />
+      <module name="Material_Kompose.charts.desktopMain" target="11" />
+      <module name="Material_Kompose.charts.desktopTest" target="11" />
+      <module name="Material_Kompose.core.commonMain" target="11" />
+      <module name="Material_Kompose.core.commonTest" target="11" />
+      <module name="Material_Kompose.core.desktopMain" target="11" />
+      <module name="Material_Kompose.core.desktopTest" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

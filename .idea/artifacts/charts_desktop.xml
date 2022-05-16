@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="charts-desktop">
+    <output-path>$PROJECT_DIR$/charts/build/libs</output-path>
+    <root id="archive" name="charts-desktop.jar">
+      <element id="module-output" name="Material_Kompose.charts.desktopMain" />
+    </root>
+  </artifact>
+</component>
