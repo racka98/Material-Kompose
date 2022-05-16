@@ -37,23 +37,25 @@ kotlin {
         with(Dependencies.Kotlin) {
             implementation(dateTime)
         }
+        implementation(compose.ui)
+        implementation(compose.runtime)
+        implementation(compose.foundation)
+        implementation(compose.animation)
+        @OptIn(org.jetbrains.compose.ExperimentalComposeLibrary::class)
+        implementation(compose.material3)
+        implementation(compose.material)
     }
 
     sourceSets["androidMain"].dependencies {
         // Compose
         with(Dependencies.Android.Compose) {
             implementation(ui)
-            implementation(animation)
-            implementation(material)
             implementation(preview)
-            implementation(foundation)
-            implementation(foundationLayout)
-            implementation(material3)
         }
     }
 
     sourceSets["desktopMain"].dependencies {
-        implementation(compose.desktop.currentOs)
+        implementation(compose.preview)
         implementation(Dependencies.Log.slf4j)
     }
 }

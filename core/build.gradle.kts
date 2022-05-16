@@ -34,6 +34,7 @@ kotlin {
     }
 
     sourceSets["commonMain"].dependencies {
+        implementation(compose.runtime)
         with(Dependencies.Kotlin) {
             implementation(dateTime)
         }
