@@ -62,6 +62,9 @@ android {
 
 dependencies {
 
+    implementation(project(":core"))
+    implementation(project(":charts"))
+
     // Core Functionality
     with(Dependencies.Android.Essential) {
         implementation(coreKtx)
