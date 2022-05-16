@@ -2,6 +2,7 @@ plugins {
     kotlin("multiplatform")
     id("com.android.library")
     id("org.jetbrains.compose")
+    id("maven-publish")
 }
 
 android {
@@ -21,6 +22,13 @@ android {
         named("main") {
             manifest.srcFile("src/androidMain/AndroidManifest.xml")
             res.srcDirs("src/androidMain/res")
+        }
+    }
+
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+            withJavadocJar()
         }
     }
 }
@@ -57,5 +65,18 @@ kotlin {
     sourceSets["desktopMain"].dependencies {
         implementation(compose.preview)
         implementation(Dependencies.Log.slf4j)
+    }
+}
+
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                version = PublishConfig.version
+                groupId = PublishConfig.groupId
+                artifactId = "charts"
+                from(components.getByName("release"))
+            }
+        }
     }
 }
