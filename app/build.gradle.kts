@@ -32,11 +32,11 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8
-        targetCompatibility = JavaVersion.VERSION_1_8
+        sourceCompatibility = JavaVersion.VERSION_11
+        targetCompatibility = JavaVersion.VERSION_11
     }
     kotlinOptions {
-        jvmTarget = "1.8"
+        jvmTarget = "11"
     }
     buildFeatures {
         compose = true
@@ -63,7 +63,7 @@ android {
 dependencies {
 
     implementation(project(":core"))
-    implementation(project(":charts"))
+    //implementation(project(":charts"))
 
     // Core Functionality
     with(Dependencies.Android.Essential) {
@@ -106,6 +106,8 @@ dependencies {
     }
 
     implementation(Dependencies.Log.timber)
+
+    implementation("com.github.racka98.Material-Kompose:charts:1.0.0-beta01")
 }
 
 tasks.withType<KotlinCompile> {

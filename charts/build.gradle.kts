@@ -11,11 +11,40 @@ android {
     defaultConfig {
         minSdk = AppConfig.minSdkVersion
         targetSdk = AppConfig.targetSdkVersion
+
+        vectorDrawables {
+            useSupportLibrary = true
+        }
     }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
+    }
+
+    buildTypes {
+        getByName("release") {
+            isMinifyEnabled = true
+            proguardFiles(
+                getDefaultProguardFile("proguard-android-optimize.txt"),
+                "proguard-rules.pro"
+            )
+        }
+    }
+
+    buildFeatures {
+        compose = true
+    }
+    composeOptions {
+        kotlinCompilerExtensionVersion = Versions.compose
+    }
+    packagingOptions {
+        resources {
+            excludes += mutableSetOf(
+                "/META-INF/{AL2.0,LGPL2.1}",
+                "META-INF/licenses/ASM"
+            )
+        }
     }
 
     sourceSets {
@@ -71,11 +100,12 @@ kotlin {
 afterEvaluate {
     publishing {
         publications {
-            create<MavenPublication>("release") {
+            create<MavenPublication>("maven") {
                 version = PublishConfig.version
                 groupId = PublishConfig.groupId
                 artifactId = "charts"
-                from(components.getByName("release"))
+
+                from(components["release"])
             }
         }
     }
