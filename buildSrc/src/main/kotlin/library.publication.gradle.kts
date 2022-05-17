@@ -54,10 +54,11 @@ publishing {
 
         // Stub javadoc.jar artifact
         artifact(javadocJar.get())
+        version = PublishConfig.version
 
         // Provide artifacts information requited by Maven Central
         pom {
-            name.set("Material Kompose")
+            name.set("Material-Kompose")
             description.set("Material Themed Jetpack Compose components for Compose Multiplatform")
             url.set("https://github.com/racka98/Material-Kompose")
 

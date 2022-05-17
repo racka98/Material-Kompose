@@ -2,6 +2,14 @@
 <project version="4">
   <component name="CompilerConfiguration">
     <bytecodeTargetLevel target="11">
+      <module name="Material-Kompose.charts.commonMain" target="11" />
+      <module name="Material-Kompose.charts.commonTest" target="11" />
+      <module name="Material-Kompose.charts.desktopMain" target="11" />
+      <module name="Material-Kompose.charts.desktopTest" target="11" />
+      <module name="Material-Kompose.core.commonMain" target="11" />
+      <module name="Material-Kompose.core.commonTest" target="11" />
+      <module name="Material-Kompose.core.desktopMain" target="11" />
+      <module name="Material-Kompose.core.desktopTest" target="11" />
       <module name="Material_Kompose.charts.commonMain" target="11" />
       <module name="Material_Kompose.charts.commonTest" target="11" />
       <module name="Material_Kompose.charts.desktopMain" target="11" />

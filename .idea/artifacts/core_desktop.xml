@@ -2,7 +2,7 @@
   <artifact type="jar" name="core-desktop">
     <output-path>$PROJECT_DIR$/core/build/libs</output-path>
     <root id="archive" name="core-desktop.jar">
-      <element id="module-output" name="Material_Kompose.core.desktopMain" />
+      <element id="module-output" name="Material-Kompose.core.desktopMain" />
     </root>
   </artifact>
 </component>

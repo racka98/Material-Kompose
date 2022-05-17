@@ -1,4 +1,4 @@
-rootProject.name = "Material Kompose"
+rootProject.name = "Material-Kompose"
 include(
     ":app",
     ":core",
