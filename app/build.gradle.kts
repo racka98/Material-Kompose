@@ -107,7 +107,7 @@ dependencies {
 
     implementation(Dependencies.Log.timber)
 
-    implementation("com.github.racka98.Material-Kompose:charts:1.0.0-beta01")
+    implementation("com.github.racka98.Material-Kompose:charts:1.0.0-beta02")
 }
 
 tasks.withType<KotlinCompile> {
